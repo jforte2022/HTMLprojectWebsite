@@ -1,0 +1,134 @@
+<html>
+
+<head>
+<title>Contact Information</title>
+<link rel="stylesheet" href="mainStyle.css" />
+<link rel="icon" href="images/faviconjf.png">
+
+<style>
+h2, h3 {
+ text-align: left;
+ }
+ 
+th{
+  font-size: 20pt;
+  color: #493D99;
+}
+
+td{
+  font-size: 18pt;
+  color: #493D99;
+}
+
+a:link, a:visited{
+	font-size: 18pt;
+ </style>
+ 
+ <script>
+ function submitForm(){
+	var full = document.myForm.fullname.value + "\n" + document.myForm.email.value + "\n\n" + document.myForm.subject.value + "\n"
+	
+	var pri = ""
+	switch(document.myForm.priority.value){
+		case "none":
+			pri = "No Priority Selected"
+			break
+		case "urgent":
+			pri = "Urgent Priority"
+			break
+		case "high":
+			pri = "High Priority"
+			break
+		case "medium":
+			pri = "Medium Priority"
+			break
+		case "low":
+			pri = "Low Priority"
+			break
+		case "spam":
+			pri = "Basically Spam (Very Low)"
+			break
+		}
+	full += "Priority: " + pri + "\n\n" + document.myForm.message.value
+	document.myForm.sentMessage.value = full
+}
+</script>
+ 
+</head>
+
+<body>
+<div class = "header">
+<br><br><br>
+<h1>Contact Information</h1>
+</div>
+
+<div class = "content">
+<table class = "center", border = "0", cols = "2">
+<tr><th>Name:</th><td>Jonathan Forte</td></tr>
+<tr><th>Email:</th><td><a href="mailto:fakemail@gmail.com?subject=Mail from our Website">fakemail@gmail.com</a></td></tr>
+<tr><th>Phone Number:</th><td>(813)335-2202</td></tr>
+<tr><th>Address:</th><td><a href="https://www.google.com/maps/dir//Alaska+State+Capitol,+120+4th+St,+Juneau,+AK+99801/@58.3019506,-134.4125425,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x5400df849b9ce55b:0xe1748096ead22884!2m2!1d-134.4103538!2d58.3019506!3e0" target="new">120 4th St, Juneau, AK 99801</a></td></tr>
+</table>
+
+<br><br><br>
+
+<form name = "myForm">
+<table class = "center", border = "0">
+
+<tr> 
+<th colspan = "2">Contact Form</th>
+</tr>
+
+<tr>
+<td text-align: right>First and Last Name: </td><td><input type = "text" size = "40" name = "fullname"></td>
+</tr>
+
+<tr>
+<td align = "right">Email: </td><td><input type = "text" size = "40" name = "email"></td>
+</tr>
+
+<tr>
+<td align = "right">Subject: </td><td><input type = "text" size = "40" name = "subject"></td>
+</tr>
+
+<tr>
+<td align = "right">Priority: </td>
+
+<td>
+<select name = "priority" id = "priority">
+<option value = "none">..Choose a Priority..</option>
+<option value = "urgent">Urgent</option>
+<option value = "high">High</option>
+<option value = "medium">Medium</option>
+<option value = "low">Low</option>
+<option value = "spam">Read After Spam (Very Low)</option>
+</td>
+</tr>
+
+<tr>
+<td align = "right" valign = "middle">Message: </td><td><textarea name = "message" rows = "4" cols = "38"></textarea></td>
+</tr>
+
+<tr>
+<td><input type = "reset" value = "Clear Form"></td>
+
+<td><input type = "button" value = "Send Message" onclick="submitForm()"></td>
+</tr>
+
+<tr><td><br></td></tr>
+
+<tr>
+<th colspan = "2">Form Displayed Below</th>
+</tr> 
+
+<tr><td><br></td></tr>
+
+<tr>
+<td align = "right" valign = "middle">Form Contents:</td>
+<td><textarea name = "sentMessage" rows = "12" cols = "38" readonly></textarea></td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>

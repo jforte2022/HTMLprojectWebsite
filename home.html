@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Jonathan Forte's Website</title>
+<link rel="stylesheet" href="mainStyle.css" />
+<link rel="icon" href="images/faviconjf.png">
+
+<style>
+h1, h2, h3{
+	text-align: center;
+	font-weight: 900;
+}
+</style>
+
+<script>
+function doDate()
+{
+    var str = "";
+
+    var days = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+    var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+    var now = new Date();
+
+    str += days[now.getDay()] + ", " + now.getDate() + " " + months[now.getMonth()] + " " + now.getFullYear() + " " + now.getHours() +":" + now.getMinutes() + ":" + now.getSeconds();
+    document.getElementById("todaysDate").innerHTML = str;
+}
+
+setInterval(doDate, 1000);
+</script>
+</head>
+
+<body>
+
+<div class = "header">
+<br><br><br>
+<h1>Welcome</h1>
+
+<h3>
+<div id="todaysDate"></div>
+</h3>
+</div>	
+
+<div class = "content">
+
+<div class = "FixedBox">
+<center>
+<p>Jonathan's Website</p>
+</center>
+<hr>
+<p>Welcome to my website. You can navigate to my resume, current work, and contact information using the menu to the side.</p>
+</div>
+
+</div>
+
+</body>
+
+</html>

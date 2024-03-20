@@ -1,0 +1,156 @@
+html {
+  background-color: #FFF6BD;
+}
+
+h1, h2, h3 {
+ font-weight: 1000;
+ text-align: center;
+}
+
+a:link, a:visited{
+	color: #493D99;
+	font-size: 14pt;
+}
+
+a:hover{
+	color: #998F4D;
+	font-size: 14pt;
+}
+
+.header{
+	background-color: #968AE6;
+	color: #E6DA89;
+	z-index: 1;
+	top: 0px;
+	left: 0px;
+	height: 200px;
+	width: 100%;
+}
+
+.content{
+	z-index: 0;
+	margin: 0px;
+	background-color: #FFF6BD;
+    color: #493D99;
+	padding: 10px;
+	width: 100% - 10px;
+	min-height: 100%;
+}
+
+.navigationbar{
+	font-size: 16pt;
+	border-width: 5px;
+	border-style: outset;
+	border-color: #968AE6;
+	padding: 10px;
+	margin: 8px;
+}
+
+ul{
+	font-style: bold;
+	font-size: 14pt;
+}
+
+p{
+	margin-top: 5px;
+	margin-bottom: 15px;
+	font-size: 14pt;
+}
+
+.FixedBox{
+	position: absolute;
+	top: 45%;
+	left: 40.5%;
+	width: 300px;
+	background-color: #998F4D;
+	border-width: 8px;
+	border-style: outset;
+	border-color: #968AE6;
+	padding: 10px;
+	margin: 5px;
+	font-weight: bold;
+	font-size: 26pt;
+	color: #FFF6BD;
+}
+
+.FloatingBox{
+	float: center;
+	width: 300px;
+	background-color: #998F4D;
+	border-width: 8px;
+	border-style: outset;
+	border-color: #968AE6;
+	padding: 10px;
+	margin: 5px;
+	font-weight: bold;
+	font-size: 20pt;
+	color: #FFF6BD;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.leftPanel{
+	z-index: 0;
+	position: absolute;
+	left: 0px;
+	top: 210px;
+	width: 200px;
+	padding: 10px;
+	background-color: #998F4D;
+	color: #FFF6BD;
+	min-height: 100%;
+	border: 8px solid;
+}
+
+.middlePanel{
+	margin-left: 230px;
+	margin-right: 230px;
+	margin-top: 0px;
+	background-color: #FFF6BD;
+	color: #493D99;
+	padding: 10px;
+	min-height: 100%;
+}
+
+.rightPanel{
+	z-index: 0;
+	position: absolute;
+	right: 0px;
+	top: 210px;
+	width: 210px;
+	padding: 10px;
+	background-color: #998F4D;
+	color: #FFF6BD;
+	min-height: 100%;
+	padding: 10px;
+	border: 8px solid;
+}
+
+.bodyContainer{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	max-width: 100%;
+	min-width: 650px;
+	padding: 8px;
+}
+
+.overlay{
+	position: relative;
+	height: 446px;
+}
+
+.overlayText{
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	color: #FFF6BD;
+}
